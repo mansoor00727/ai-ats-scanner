@@ -2,6 +2,12 @@
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![Reflex](https://img.shields.io/badge/reflex-0.4.8-purple.svg)
+![Ollama](https://img.shields.io/badge/ollama-llama2-black.svg?logo=ai)
+![Docker](https://img.shields.io/badge/docker-enabled-2496ED.svg?logo=docker&logoColor=white)
+![spaCy](https://img.shields.io/badge/spaCy-3.7.4-09A3D5.svg?logo=spacy&logoColor=white)
+![Privacy](https://img.shields.io/badge/privacy-local_AI-brightgreen.svg?logo=shield&logoColor=white)
+![GitHub Issues](https://img.shields.io/github/issues/mansoor00727/ai-ats-scanner)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/mansoor00727/ai-ats-scanner)
 
 An intelligent **Applicant Tracking System (ATS)** powered by local LLMs that analyzes resumes against job descriptions, providing semantic matching scores and AI-driven recruitment advice.
 
@@ -111,7 +117,19 @@ advice = get_ai_advice(resume_text, job_description)  # Powered by Llama 2
 3. **Cosine Similarity**: Calculate semantic match (0-100%)
 4. **AI Analysis**: Generate contextual hiring insights via Ollama
 
-## 🎯 Example Output
+## 📸 Screenshots
+
+### Main Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### Candidate Analysis Results with AI Insight
+![Results](screenshots/Results.png)
+
+### Skills Radar Visualization
+![Radar Chart](screenshots/Radar.png)
+
+### Optimizer
+![AI Advice](screenshots/optimizer.png)
 
 
 
