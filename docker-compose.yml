@@ -1,0 +1,53 @@
+
+services:
+  # Ollama service for AI processing
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ai-ats-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - ats-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Main ATS Scanner application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-ats-scanner
+    ports:
+      - "3000:3000"  # Frontend
+      - "8000:8000"  # Backend API
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OLLAMA_HOST=http://ollama:11434
+    env_file:
+      - .env
+    volumes:
+      # Mount source code for development (comment out for production)
+      - ./ai_ats_scanner:/app/ai_ats_scanner
+      - ./assets:/app/assets
+      - ./uploaded_files:/app/uploaded_files
+      # Preserve node_modules and Python cache
+      - /app/.web/node_modules
+      - /app/.venv
+    depends_on:
+      ollama:
+        condition: service_healthy
+    networks:
+      - ats-network
+    restart: unless-stopped
+
+networks:
+  ats-network:
+    driver: bridge
+
+volumes:
+  ollama_data:

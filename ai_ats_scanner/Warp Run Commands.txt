@@ -1,0 +1,27 @@
+#Launch Ollama
+ollama serve
+
+# Go to project dir
+cd path/to/your/ai_ats_scanner
+
+# Create virtual env (if not already created)
+python3 -m venv venv
+
+#Activate it
+source venv/bin/activate
+
+#Install all requirements
+pip install -r requirements.txt
+
+#Remove all docker containers
+docker rm - f ats-app
+
+#build new container if not already built
+# 1. Kill any zombie containers
+docker rm -f ats-app
+
+# 2. Rebuild from scratch (Ignore all old versions)
+docker build --no-cache -t ai-ats-scanner .
+
+#Run production container
+docker run -d -p 3000:3000 -p 8000:8000 --name ats-app ai_ats_scanner
