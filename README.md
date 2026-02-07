@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![Reflex](https://img.shields.io/badge/reflex-0.4.8-purple.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 An intelligent **Applicant Tracking System (ATS)** powered by local LLMs that analyzes resumes against job descriptions, providing semantic matching scores and AI-driven recruitment advice.
 
@@ -114,19 +113,7 @@ advice = get_ai_advice(resume_text, job_description)  # Powered by Llama 2
 
 ## 🎯 Example Output
 
-```
-┌─────────────────────────────────────────────┐
-│ Candidate Leaderboard                       │
-├─────────────────────────────────────────────┤
-│ john_doe.pdf              ██████████ 87%    │
-│ jane_smith.pdf            ████████░░ 82%    │
-│ alex_wong.pdf             ███████░░░ 76%    │
-└─────────────────────────────────────────────┘
 
-🚩 AI Recruiter's Strategic Advice:
-John shows strong backend expertise with 5+ years in Python/Django.
-Consider technical interview focusing on distributed systems...
-```
 
 ## ⚙️ Configuration
 
@@ -142,11 +129,7 @@ MAX_UPLOAD_SIZE=10MB
 
 Contributions welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-
-MIT License - see LICENSE file for details
-
-## 🔮 Roadmap
+## 🔮 Future Roadmap
 
 - [ ] Support for LinkedIn profile parsing
 - [ ] Multi-language resume support
@@ -160,50 +143,4 @@ For questions or support, please open an issue on GitHub.
 
 ---
 
-**Built with ❤️ using local AI - Your data never leaves your machine**
-
-
-# 🚀 AI-Powered ATS Resume Suite (Local & Private)
-
-A production-grade, full-stack ATS (Applicant Tracking System) suite designed to bridge the gap between candidates and recruiters. This tool leverages **Local LLMs** and **Semantic Search** to rank resumes and provide actionable career coaching without compromising data privacy.
-
-
-> **Insert Screenshot 1: The main dashboard with a Job Description and uploaded resumes here.**
-
----
-
-## 🌟 Key Features
-
-- **Batch Resume Processing:** Upload multiple PDFs or Word docs simultaneously.
-- **Semantic Ranking:** Uses `all-MiniLM-L6-v2` transformers to understand skill context beyond simple keywords.
-- **Privacy-First AI:** Integrated with **Ollama (Llama 3)** to run all AI analysis locally on your hardware.
-- **Skill Gap Visualization:** Interactive **Radar Charts** to visualize how well a candidate fits a role.
-- **Resume Point Improver:** An AI-driven "Optimizer" that transforms weak bullet points into high-impact, results-oriented achievements.
-- **Clipboard Integration:** One-click copy for optimized resume points.
-
----
-
-## 🛠️ Technical Architecture
-
-
-
-- **Frontend/Backend:** [Reflex](https://reflex.dev/) (Pure Python Full-stack Framework)
-- **AI Engine:** [Ollama](https://ollama.com/) (Llama 3)
-- **NLP & Embeddings:** Sentence-Transformers, PyMuPDF, Python-Docx
-- **Containerization:** Docker (Multi-stage build)
-- **Environment:** Windsor, Ontario, Canada 🇨🇦
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Docker Desktop
-- Ollama (Running locally)
-
-### Installation & Deployment
-
-1. **Clone the Repo:**
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/ai-ats-scanner.git](https://github.com/YOUR_USERNAME/ai-ats-scanner.git)
-   cd ai-ats-scanner
+**Built using local AI - Your data never leaves your machine**
