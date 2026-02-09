@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![Reflex](https://img.shields.io/badge/reflex-0.4.8-purple.svg)
-![Ollama](https://img.shields.io/badge/ollama-llama2-black.svg?logo=ai)
+![Ollama](https://img.shields.io/badge/ollama-llama3-black.svg?logo=ai)
 ![Docker](https://img.shields.io/badge/docker-enabled-2496ED.svg?logo=docker&logoColor=white)
 ![spaCy](https://img.shields.io/badge/spaCy-3.7.4-09A3D5.svg?logo=spacy&logoColor=white)
 ![Privacy](https://img.shields.io/badge/privacy-local_AI-brightgreen.svg?logo=shield&logoColor=white)
@@ -94,7 +94,7 @@ docker-compose up --build
 | Technology | Purpose |
 |------------|--------|
 | **Reflex** | Full-stack Python web framework |
-| **Ollama** | Local LLM inference (Llama 2) |
+| **Ollama** | Local LLM inference (Llama 3) |
 | **spaCy** | Natural language processing |
 | **Sentence Transformers** | Semantic similarity matching |
 | **scikit-learn** | ML utilities and metrics |
@@ -107,7 +107,7 @@ docker-compose up --build
 # Semantic matching pipeline
 resume_text = extract_text(resume_file)
 score = calculate_semantic_match(resume_text, job_description)
-advice = get_ai_advice(resume_text, job_description)  # Powered by Llama 2
+advice = get_ai_advice(resume_text, job_description)  # Powered by Llama 3
 ```
 
 ### Scoring Algorithm
